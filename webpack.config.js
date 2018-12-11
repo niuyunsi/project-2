@@ -1,3 +1,5 @@
+const path = require('path');
+
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -5,10 +7,21 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: './src/index.js',
+  target: 'electron-renderer',
+
+  entry: {
+    app: './src/app.js',
+    background: './src/background.js'
+  },
+
   output: {
-    filename: 'bundle.[hash].js',
-    path: __dirname + '/dist'
+    filename: '[name].js',
+    path: path.resolve(__dirname + '/app')
+  },
+
+  node: {
+    __dirname: false,
+    __filename: false
   },
 
   devtool: 'source-map',
