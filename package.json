@@ -11,13 +11,14 @@
   "homepage": "https://github.com/niuyunsi",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    
     "start": "webpack-dev-server --mode development",
-    "build": "rm -r app & webpack --mode production",
-    "build-watch": "rm -r app & webpack --watch --mode development",
-    "electron-dev": "",
-    "electron": "electron .",
+    "start-electron": "node build/start.js",
+
+    "build": "webpack --mode production",
+
     "electron-pack": "electron-builder --dir",
-    "electron-dist": "electron-builder"
+    "electron-dist": "rm -rf dist && electron-builder"
   },
   "build": {
     "appId": "porject-2-app-id",
