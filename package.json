@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
     "start-electron": "node build/start.js",
-    "build": "webpack --mode production",
+    "build-docs": "node build/docs.js",
     "electron-pack": "electron-builder --dir",
     "electron-dist": "rm -rf dist && electron-builder"
   },
@@ -38,9 +38,11 @@
     "html-webpack-plugin": "^3.2.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "webpack-merge": "^4.1.5"
   },
   "dependencies": {
+    "electron-updater": "^4.0.6",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "source-map-loader": "^0.2.4"

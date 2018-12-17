@@ -1,4 +1,4 @@
-const path = require('path');
+// const path = require('path');
 
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
@@ -19,15 +19,15 @@ module.exports = env => {
 
     mode: translateEnvToMode(env),
 
-    entry: {
-      app: './src/app.js',
-      background: './src/background.js'
-    },
+    // entry: {
+    //   app: './src/app.js',
+    //   background: './src/background.js'
+    // },
 
-    output: {
-      filename: '[name].js',
-      path: path.resolve(__dirname + '/../app')
-    },
+    // output: {
+    //   filename: '[name].js',
+    //   path: path.resolve(__dirname + '/../app')
+    // },
 
     node: {
       __dirname: false,

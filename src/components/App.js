@@ -14,12 +14,13 @@ const style = {
 };
 
 export const App = () => {
-  return (
-    <div style={style}>
-      <Nav />
-      <Main>
-        <div>Main Window</div>
-      </Main>
-    </div>
-  );
+  return <div><span>ver 0.0.1</span></div>
+  // return (
+  //   <div style={style}>
+  //     <Nav />
+  //     <Main>
+  //       <div>Main Window</div>
+  //     </Main>
+  //   </div>
+  // );
 };
