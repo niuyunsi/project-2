@@ -1,6 +1,6 @@
 {
   "name": "project-2",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "author": {
     "name": "Yunsi Niu",
@@ -12,10 +12,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
-    "start-electron": "node build/start.js",
-    "build-docs": "node build/docs.js",
+    "start-electron": "rm -rf app && node build/start.js",
+    "build-app": "rm -rf app && node build/app.js",
+    "build-docs": "rm -rf docs && node build/docs.js",
     "electron-pack": "electron-builder --dir",
-    "electron-dist": "rm -rf dist && electron-builder"
+    "electron-dist": "rm -rf dist && electron-builder",
+    "server": "http-server docs/ -p 8080"
   },
   "build": {
     "appId": "porject-2-app-id",
@@ -35,7 +37,9 @@
     "babel-loader": "^8.0.4",
     "electron": "^3.0.10",
     "electron-builder": "^20.38.2",
+    "electron-log": "^2.2.17",
     "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10",

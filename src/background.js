@@ -7,12 +7,11 @@ const url = require('url');
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
-const startUrl =
-  url.format({
-    pathname: path.join(__dirname, '/../app/index.html'),
-    protocol: 'file:',
-    slashes: true
-  });
+const startUrl = url.format({
+  pathname: path.join(__dirname, '/../app/index.html'),
+  protocol: 'file:',
+  slashes: true
+});
 
 function createWindow() {
   // Create the browser window.
