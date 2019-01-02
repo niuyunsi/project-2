@@ -1,9 +1,8 @@
-// const path = require('path');
-
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: 'index.html'
+  template: 'index.html',
+  excludeChunks: ['background']
 });
 
 const translateEnvToMode = env => {
@@ -18,16 +17,6 @@ module.exports = env => {
     target: 'electron-renderer',
 
     mode: translateEnvToMode(env),
-
-    // entry: {
-    //   app: './src/app.js',
-    //   background: './src/background.js'
-    // },
-
-    // output: {
-    //   filename: '[name].js',
-    //   path: path.resolve(__dirname + '/../app')
-    // },
 
     node: {
       __dirname: false,

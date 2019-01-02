@@ -10,18 +10,18 @@
   "main": "app/background.js",
   "homepage": "https://github.com/niuyunsi",
   "scripts": {
+    "start-app": "rm -rf app && node build/start-app.js",
     "start-docs":"rm -rf docs && node build/start-docs.js",
-    "start-electron": "rm -rf app && node build/start-electron.js",
     
-    "build-app": "rm -rf app && node build/app.js",
-    "build-docs": "rm -rf docs && node build/docs.js",
+    "build-app": "rm -rf app && node build/build-app.js",
+    "build-docs": "rm -rf docs && node build/build-docs.js",
     
     "electron-dist": "rm -rf dist && electron-builder",
     "electron-pack": "electron-builder --dir",
     
     "server": "http-server docs/ -p 8080",
     
-    "start": "webpack-dev-server --mode development",
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "build": {

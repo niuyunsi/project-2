@@ -13,7 +13,7 @@ const watching = compiler.watch({}, (err, stats) => {
     serverStarted = true;
 
     childProcess
-      .spawn('http-server', ['docs/', '-p 7777'])
+      .spawn('http-server', ['docs/'])
       .on('close', () => {
         watching.close();
       });
